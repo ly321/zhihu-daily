@@ -1,13 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Header from '@/components/Header'
+import Index from '../page/Index.vue'
 
 Vue.use(Router)
 
 export default new Router({
     routes: [{
         path: '/',
-        name: 'header',
-        component: Header
+        component: Index
     }]
 })
