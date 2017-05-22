@@ -1,0 +1,53 @@
+<template>
+    <ul class="articleList">
+        <li class="article" v-for="article in articleList">
+            <span>{{article.value}}</span>
+            <img :src="article.image|image">
+        </li>
+    </ul>
+</template>
+<script>
+    import {
+        getNews
+    } from '../service/http.js';
+    export default {
+        name: 'articleList',
+        data() {
+            return {
+                articleList: []
+            }
+        },
+        mounted(){
+            getNews().then((res)=>{
+                this.articleList=res.stories;
+            })
+        }
+    }
+</script>
+<style>
+.articleList{
+        flex-direction: column;
+    background-color: #f4f4f4;
+    padding: 10px;
+    width: 100%;
+}
+.article{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 100px;
+    justify-content: flex-start;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 0 1px 1px #cecece;
+    padding-left: 15px;
+}
+.article img{
+        width: 70px;
+    height: 70px;
+    flex-basis: 70px;
+    flex-shrink: 0;
+}
+.article span{
+        margin-left: 15px;
+}
+</style>

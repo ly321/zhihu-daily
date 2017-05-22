@@ -1,32 +1,78 @@
 <template>
-    <div class="carousel">
-        <div class="carousel-container">
+    <div class="carousel" >
+        <div class="carousel-container" :style="{
+				transform:`translateX(${translateX}px)`
+			}">
             <div class="item" v-for="item in items">
-                <img :src="item.image|image" >
+                <img :src="item.image|image">
                 <div class="title">{{item.title}}</div>
             </div>
         </div>
     </div>
 </template>
 <script>
-import {getCarousel} from '../service/http.js';
-    export default{
-        name:'carousel',
-        data(){
-            return{
-                items:[],
-            } 
+    import {
+        getNews
+    } from '../service/http.js';
+    export default {
+        name: 'carousel',
+        data() {
+            return {
+                items: [],
+                translateX:0,
+            }
         },
-        methods:{
-
+        methods: {
+            movePic: function() {
+                var that=this;
+                setInterval(function() {
+                    if(that.translateX>=-1242){
+                        that.translateX-=414;
+                    }else if(that.translateX<=-414){
+                        that.translateX=0;
+                    }
+                }, 1000)
+            },
         },
-        mounted(){
-            getCarousel().then((res)=>{
-                this.items=res.top_stories;
+        mounted() {
+            getNews().then((res) => {
+                this.items = res.top_stories;
+                
             });
+            this.movePic();
         }
     }
 </script>
 <style>
-
+    .carousel {
+        width: 100%;
+        overflow-x: hidden;
+        position: relative;
+        display: block;
+    }
+    .carousel-container {
+        width: 500%;
+        display: block;
+        position: static;
+        height: 200px;
+        transition: transform .4s;
+    }
+    .item {
+        width: 414px;
+        position: relative;
+        float: left;
+        height: 200px;
+        background-color: transparent;
+        overflow: hidden;
+    }
+    .title {
+        width: inherit;
+        position: absolute;
+        height: 60px;
+        bottom: 0;
+        left: 0;
+        background-color: hsla(0, 0%, 78%, .5);
+        color: #fff;
+        padding: 0 10px;
+    }
 </style>
