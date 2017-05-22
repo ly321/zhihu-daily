@@ -1,15 +1,17 @@
 <template>
-    <div class="view">
-        <router-view class="router-view"></router-view>
-    </div>
+<div class="slide">
+    <div class="slide-main"></div>
+    <div class="slide-cover"></div>
+</div>
 </template>
 <script>
     export default {
-        name: 'view',
-        data() {
-            return {
+        name:'slide',
+        data(){
+            return{
+
             }
-        },
+        }
     }
 </script>
 <style>
@@ -24,20 +26,14 @@ body, div, li, p, span, ul {
     font-family: apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang-SC-Regular,STHeiti,Helvetica,Arial,Verdana,"sans-serif",Microsoft YaHei;
     font-weight: 200;
 }
-.view {
-    width: inherit;
-    flex-grow: 2;
-    position: relative;
-    overflow-y: auto;
-    display: block;
-    /*overflow-x: hidden;*/
-}
-
-.view .router-view {
-    width: 100%;
-}
-.view, .view .router-view {
+.slide .slide-main {
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    background-color: #fff;
+    left: 0;
     flex-direction: column;
     justify-content: flex-start;
 }
+
 </style>

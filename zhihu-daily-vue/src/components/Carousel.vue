@@ -1,5 +1,5 @@
 <template>
-    <div class="carousel">
+    <div class="carousel" >
         <div class="carousel-container" :style="{
     				transform:`translateX(${translateX}px)`
     			}">
@@ -19,25 +19,40 @@
         data() {
             return {
                 items: [],
-                translateX: 0,
+                translateX: -414,
+        
             }
         },
         methods: {
             movePic: function() {
                 var that = this;
                 setInterval(function() {
-                    if (that.translateX >= -1242) {
+                    if (that.translateX >= -1656) {
                         that.translateX -= 414;
-                    } else if (that.translateX <= -414) {
-                        that.translateX = 0;
+                    } else if (that.translateX <= -1656) {
+                        that.translateX = -414;
                     }
                 }, 1000)
+                // setInterval(function() {
+                //     if (that.mLeft >= -2070) {
+                //         that.mLeft -= 414;
+                //     } else if (that.mLeft <= -2070) {
+                //         that.mLeft = -414;
+                //     }
+                // }, 1000)
             },
+            clonePic() {
+                this.items.push(this.items[0]);
+                this.items.unshift(this.items[4]);
+                console.log(this.items);
+            }
         },
         mounted() {
             getNews().then((res) => {
                 this.items = res.top_stories;
+                this.clonePic();
             });
+            
             this.movePic();
         }
     }
@@ -65,7 +80,7 @@
         display: block;
     }
     .carousel-container {
-        width: 500%;
+        width: 700%;
         display: block;
         position: static;
         height: 200px;

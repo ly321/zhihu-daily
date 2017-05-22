@@ -12,9 +12,10 @@
         },
         methods: {
             handleClick: function() {
-                this.onclick();
+                this.onClick();
             }
-        }
+        },
+        props:['onClick'],
     }
 </script>
 <style>

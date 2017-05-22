@@ -39,17 +39,15 @@ body, div, li, p, span, ul {
 .articleList{
         flex-direction: column;
     background-color: #f4f4f4;
-    padding: 10px;
     width: 100%;
 }
 .article{
     width: 100%;
-    margin-bottom: 10px;
     height: 100px;
     justify-content: space-between;
     background-color: #fff;
     border-radius: 2px;
-    box-shadow: 0 0 1px 1px #cecece;
+    box-shadow: 0 0 1px 0 #cecece;
     padding-left: 15px;
     padding-right: 15px;
 }
