@@ -1,8 +1,8 @@
 <template>
-    <div class="carousel" >
+    <div class="carousel">
         <div class="carousel-container" :style="{
-				transform:`translateX(${translateX}px)`
-			}">
+    				transform:`translateX(${translateX}px)`
+    			}">
             <div class="item" v-for="item in items">
                 <img :src="item.image|image">
                 <div class="title">{{item.title}}</div>
@@ -19,17 +19,17 @@
         data() {
             return {
                 items: [],
-                translateX:0,
+                translateX: 0,
             }
         },
         methods: {
             movePic: function() {
-                var that=this;
+                var that = this;
                 setInterval(function() {
-                    if(that.translateX>=-1242){
-                        that.translateX-=414;
-                    }else if(that.translateX<=-414){
-                        that.translateX=0;
+                    if (that.translateX >= -1242) {
+                        that.translateX -= 414;
+                    } else if (that.translateX <= -414) {
+                        that.translateX = 0;
                     }
                 }, 1000)
             },
@@ -37,15 +37,29 @@
         mounted() {
             getNews().then((res) => {
                 this.items = res.top_stories;
-                
             });
             this.movePic();
         }
     }
 </script>
 <style>
+    body,
+    div,
+    li,
+    p,
+    span,
+    ul {
+        padding: 0;
+        margin: 0;
+        bottom: 0;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: apple-system, BlinkMacSystemFont, Helvetica Neue, PingFang-SC-Regular, STHeiti, Helvetica, Arial, Verdana, "sans-serif", Microsoft YaHei;
+        font-weight: 200;
+    }
     .carousel {
-        width: 100%;
         overflow-x: hidden;
         position: relative;
         display: block;

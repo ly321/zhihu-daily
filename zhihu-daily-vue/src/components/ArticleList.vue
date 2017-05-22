@@ -1,8 +1,8 @@
 <template>
     <ul class="articleList">
         <li class="article" v-for="article in articleList">
-            <span>{{article.value}}</span>
-            <img :src="article.image|image">
+            <span>{{article.title}}</span>
+            <img :src="article.images[0]|image">
         </li>
     </ul>
 </template>
@@ -25,6 +25,17 @@
     }
 </script>
 <style>
+body, div, li, p, span, ul {
+    padding: 0;
+    margin: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang-SC-Regular,STHeiti,Helvetica,Arial,Verdana,"sans-serif",Microsoft YaHei;
+    font-weight: 200;
+}
 .articleList{
         flex-direction: column;
     background-color: #f4f4f4;
@@ -35,11 +46,12 @@
     width: 100%;
     margin-bottom: 10px;
     height: 100px;
-    justify-content: flex-start;
+    justify-content: space-between;
     background-color: #fff;
     border-radius: 2px;
     box-shadow: 0 0 1px 1px #cecece;
     padding-left: 15px;
+    padding-right: 15px;
 }
 .article img{
         width: 70px;
@@ -50,4 +62,5 @@
 .article span{
         margin-left: 15px;
 }
+
 </style>
