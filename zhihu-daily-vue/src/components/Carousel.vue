@@ -19,7 +19,7 @@
         data() {
             return {
                 items: [],
-                translateX: -414,
+                translateX: 0,
         
             }
         },
@@ -27,10 +27,10 @@
             movePic: function() {
                 var that = this;
                 setInterval(function() {
-                    if (that.translateX >= -1656) {
+                    if (that.translateX >= -1242) {
                         that.translateX -= 414;
-                    } else if (that.translateX <= -1656) {
-                        that.translateX = -414;
+                    } else if (that.translateX <= -1242) {
+                        that.translateX = 0;
                     }
                 }, 1000)
                 // setInterval(function() {
@@ -50,7 +50,7 @@
         mounted() {
             getNews().then((res) => {
                 this.items = res.top_stories;
-                this.clonePic();
+                // this.clonePic();
             });
             
             this.movePic();
@@ -80,7 +80,7 @@
         display: block;
     }
     .carousel-container {
-        width: 700%;
+        width: 500%;
         display: block;
         position: static;
         height: 200px;
