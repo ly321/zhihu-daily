@@ -81,23 +81,9 @@
         transform: translateX(-100%);
         transition: transform .3s;
         background: hsla(0, 0%, 78%, .5);
+        z-index: 999;
     }
-    .slide-main {
-        width: 70%;
-        height: 100%;
-        position: absolute;
-        background-color: #fff;
-        left: 0;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-    .slide-cover {
-        width: 30%;
-        height: 100%;
-        position: absolute;
-        right: 0;
-        background-color: transparent;
-    }
+    
     .slide-show{
         transform: translateX(0);
     }

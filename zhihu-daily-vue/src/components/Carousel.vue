@@ -78,6 +78,7 @@
         overflow-x: hidden;
         position: relative;
         display: block;
+        z-index: 1
     }
     .carousel-container {
         width: 500%;

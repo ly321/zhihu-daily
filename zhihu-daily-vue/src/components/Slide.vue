@@ -1,7 +1,7 @@
 <template>
 <div class="slide">
     <div class="slide-main"></div>
-    <div class="slide-cover" :onClick='handleHide()'></div>
+    <div class="slide-cover" @click='handleHide()'></div>
 </div>
 </template>
 <script>
@@ -32,6 +32,7 @@ body, div, li, p, span, ul {
     font-family: apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang-SC-Regular,STHeiti,Helvetica,Arial,Verdana,"sans-serif",Microsoft YaHei;
     font-weight: 200;
 }
+
 .slide .slide-main {
     width: 70%;
     height: 100%;
@@ -40,6 +41,13 @@ body, div, li, p, span, ul {
     left: 0;
     flex-direction: column;
     justify-content: flex-start;
+    z-index: 999;
 }
-
+.slide .slide-cover {
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background-color: transparent;}
+    
 </style>

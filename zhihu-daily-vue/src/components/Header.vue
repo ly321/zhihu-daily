@@ -22,11 +22,14 @@
     .header {
         width: inherit;
         height: 70px;
-        background-color: #00a2ea;
+        /*background-color: #00a2ea;*/
         justify-content: flex-start;
         padding-left: 30px;
         flex-basis: 70px;
         flex-shrink: 0;
+        position: absolute;
+        top: 0;
+        z-index: 2;
     }
     .header .menu {
         height: 16px;
