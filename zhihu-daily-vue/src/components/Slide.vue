@@ -1,7 +1,7 @@
 <template>
 <div class="slide">
     <div class="slide-main"></div>
-    <div class="slide-cover"></div>
+    <div class="slide-cover" :onClick='handleHide()'></div>
 </div>
 </template>
 <script>
@@ -11,7 +11,13 @@
             return{
 
             }
-        }
+        },
+        methods:{
+            handleHide(){
+                this.onClick();
+            }
+        },
+        props:['onClick']
     }
 </script>
 <style>
@@ -30,7 +36,7 @@ body, div, li, p, span, ul {
     width: 70%;
     height: 100%;
     position: absolute;
-    background-color: #fff;
+    background-color: #232A30;
     left: 0;
     flex-direction: column;
     justify-content: flex-start;

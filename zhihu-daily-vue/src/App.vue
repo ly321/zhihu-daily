@@ -98,6 +98,9 @@
         right: 0;
         background-color: transparent;
     }
+    .slide-show{
+        transform: translateX(0);
+    }
     @media (max-width: 414px) {
         .cover {
             display: flex;
