@@ -51,9 +51,12 @@ server.on('request', function(req, res) {
             response.on('end', function() {
                 res.writeHead(200, response.headers);
                 res.write(c, "binary");
-                res.end();
+                res.end("");
             })
         });
+        request.on("error", function(err) {
+            console.error(err);
+        })
         request.end();
     }
 });

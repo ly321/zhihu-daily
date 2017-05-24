@@ -62,7 +62,7 @@
         flex-grow: 2;
         height: inherit;
         background: inherit;
-        z-index: 20;
+        z-index:999;
     }
     #app {
         height: inherit;
@@ -81,7 +81,7 @@
         transform: translateX(-100%);
         transition: transform .3s;
         background: hsla(0, 0%, 78%, .5);
-        z-index: 999;
+        z-index: 20;
     }
     
     .slide-show{
