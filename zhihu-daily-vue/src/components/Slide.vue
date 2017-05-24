@@ -6,11 +6,11 @@
                 <span>Vue知乎日报</span>
             </div>
             <ul class="titleList">
-                <li class="titleName">
+                <li class="titleName" @click='handeleClick()'>
                     <span>首页</span>
                     <img src="../assets/arrow.png" alt="">
                 </li>
-                <li class="titleName" v-for="titleName in titleList">
+                <li class="titleName"  v-for="titleName in titleList" @click='handleClick(titleName.name,titleName.id)'>
                     <span>{{titleName.name}}</span>
                     <img src="../assets/arrow.png" alt="">
                 </li>
@@ -20,6 +20,7 @@
     </div>
 </template>
 <script>
+    import TitleView from '../page/TitleView'
     import {
         getTitles
     } from '../service/http.js'
@@ -31,6 +32,17 @@
             }
         },
         methods: {
+            handleClick(name,id) {
+                this.$router.push({
+                    path: 'titleView',
+                    query: {
+                        id
+                    }
+                });
+                this.onClick();
+                console.log('0000000');
+                this.$emit('headerShow');
+            },
             handleHide() {
                 this.onClick();
             }
@@ -99,14 +111,14 @@
     .titleName {
         width: 100%;
         height: 40px;
-         display: flex;
-  justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
     }
-    .titleName span{
+    .titleName span {
         color: #94999D;
         margin-left: 20px;
     }
-    .titleName img{
+    .titleName img {
         margin-right: 20px;
     }
 </style>

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="cover"></div>
         <div id="app">
-            <gHeader :onClick="handleClick"></gHeader>
+            <gHeader :onClick="handleClick" @headerShow='showClick()' :class="show?'header-show':''"></gHeader>
             <gView></gView>
             <gSlide :onClick="handleClick" :class="visable?'slide-show':''"></gSlide>
         </div>
@@ -19,11 +19,17 @@
         data() {
             return {
                 visable: false,
+                show:false,
             }
         },
         methods: {
             handleClick() {
                 this.visable = !this.visable;
+                
+            },
+            showClick(){
+                console.log('1111');
+                this.show=!this.show;
             }
         },
         components: {
@@ -86,6 +92,9 @@
     
     .slide-show{
         transform: translateX(0);
+    }
+    .header-show{
+        background-color: #00a2ea;
     }
     @media (max-width: 414px) {
         .cover {
