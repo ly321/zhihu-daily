@@ -32,14 +32,7 @@
                     } else if (that.translateX <= -1242) {
                         that.translateX = 0;
                     }
-                }, 1000)
-                // setInterval(function() {
-                //     if (that.mLeft >= -2070) {
-                //         that.mLeft -= 414;
-                //     } else if (that.mLeft <= -2070) {
-                //         that.mLeft = -414;
-                //     }
-                // }, 1000)
+                }, 1000);
             },
             clonePic() {
                 this.items.push(this.items[0]);

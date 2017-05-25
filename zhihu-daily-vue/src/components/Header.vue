@@ -1,21 +1,23 @@
 <template>
-    <div class="header">
+    <div class="header" v-bind:class="{color:color}">
         <div class="menu" @click="handleClick()"></div>
-        <span></span>
+        <span>{{headerTitle}}</span>
     </div>
 </template>
 <script>
     export default {
         name: "header",
         data() {
-            return {}
+            return {
+                
+            }
         },
         methods: {
             handleClick: function() {
                 this.onClick();
-            }
+            },
         },
-        props:['onClick'],
+        props:['onClick','color','headerTitle'],
     }
 </script>
 <style>
@@ -31,6 +33,9 @@
         top: 0;
         z-index: 2;
     }
+    .color{
+        background-color: #00a2ea;        
+    }
     .header .menu {
         height: 16px;
         width: 20px;
@@ -44,5 +49,9 @@
         width: 20px;
         height: 2px;
         background-color: #fff;
+    }
+    .header span{
+        color: #fff;
+    margin-left: 20px;
     }
 </style>

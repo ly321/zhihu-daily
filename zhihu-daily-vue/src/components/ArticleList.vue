@@ -1,12 +1,13 @@
 <template>
     <ul class="articleList">
-        <li class="article" v-for="article in articleList">
+        <li class="article" v-for="article in articleList" @click='handleClick(article.id)'>
             <span>{{article.title}}</span>
             <img :src="article.images[0]|image">
         </li>
     </ul>
 </template>
 <script>
+import {bus} from '../bus.js'
     import {
         getNews
     } from '../service/http.js';
@@ -17,11 +18,33 @@
                 articleList: []
             }
         },
+        methods:{
+            getId(){
+                this.id=this.$route.query.id;
+            },
+            handleClick(id){
+                this.$router.push({
+                    path:'articleView',
+                    query:{
+                        id
+                    }
+                });
+                bus.$emit('tip', '内容详情');
+                bus.$emit('changeColor',id)
+            }
+        },
+        beforeRouteUpdate(to,from,next){
+            getTitlesOne(to.query.id).then((res) => {
+                this.titleList = res.stories;
+                next();
+            })
+        },
         mounted(){
+            this.getId();
             getNews().then((res)=>{
                 this.articleList=res.stories;
             })
-        }
+        },
     }
 </script>
 <style>

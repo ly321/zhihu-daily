@@ -6,7 +6,7 @@
                 <span>Vue知乎日报</span>
             </div>
             <ul class="titleList">
-                <li class="titleName" @click='handeleClick()'>
+                <li class="titleName" @click='homeClick()'>
                     <span>首页</span>
                     <img src="../assets/arrow.png" alt="">
                 </li>
@@ -32,7 +32,19 @@
             }
         },
         methods: {
+            homeClick(){
+                this.$router.push({
+                    path: '/',
+                    query:{
+                        
+                    }
+                });
+                this.onClick();
+                this.changeColor();
+                this.changeTitle('热门消息')
+            },
             handleClick(name,id) {
+                // console.log(id);
                 this.$router.push({
                     path: 'titleView',
                     query: {
@@ -40,8 +52,8 @@
                     }
                 });
                 this.onClick();
-                console.log('0000000');
-                this.$emit('headerShow');
+                this.changeColor(id);
+                this.changeTitle(name);
             },
             handleHide() {
                 this.onClick();
@@ -50,10 +62,9 @@
         mounted() {
             getTitles().then((res) => {
                 this.titleList = res.others;
-                console.log(this.titleList);
             })
         },
-        props: ['onClick']
+        props: ['onClick','changeColor','changeTitle']
     }
 </script>
 <style>

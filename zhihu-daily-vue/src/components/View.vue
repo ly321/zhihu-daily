@@ -8,6 +8,7 @@
         name: 'view',
         data() {
             return {
+
             }
         },
     }
