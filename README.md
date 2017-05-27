@@ -18,7 +18,6 @@
 api来源于<a href="https://github.com/izzyleung/ZhihuDailyPurify"/>@izzyleung</a>,项目灵感来源于<a href="https://github.com/GaryChangCN/zhihu-daily-byVuejs"/>@GaryChangCN</a>
 
 ## 截图
-![image](http://om1hdlq49.bkt.clouddn.com/markdown1.png) 
 ![image](http://om1hdlq49.bkt.clouddn.com/markdown2.png) 
 ![image](http://om1hdlq49.bkt.clouddn.com/markdown3.png) 
 ![image](http://om1hdlq49.bkt.clouddn.com/markdown4.png) 
