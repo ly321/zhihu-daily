@@ -1,5 +1,5 @@
 # 知乎日报-vue
-开发框架：vue2.0全家桶(vue.js.vue-router) 构建工具: webpack
+开发框架：vue2.0(vue.js.vue-router) 构建工具: webpack
 
 ## 功能介绍
 * 查看最新消息
