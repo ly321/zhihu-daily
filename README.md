@@ -12,7 +12,8 @@
     git clone https://github.com/ly321/zhihu-daily-byVuejs.git
     node .\server\app.js
     cd .\zhihu-daily-vue\
-    yarn run dev
+    cnpm install
+    yarn run dev | npm run dev |cnpm run dev
     
 ## API
 api来源于<a href="https://github.com/izzyleung/ZhihuDailyPurify"/>@izzyleung</a>,项目灵感来源于<a href="https://github.com/GaryChangCN/zhihu-daily-byVuejs"/>@GaryChangCN</a>
