@@ -12,7 +12,6 @@
     git clone https://github.com/ly321/zhihu-daily-byVuejs.git
     node .\server\app.js
     cd .\zhihu-daily-vue\
-    cnpm install
     yarn run dev | npm run dev |cnpm run dev
     
 ## API
