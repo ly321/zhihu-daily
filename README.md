@@ -9,7 +9,6 @@
 ### tips 
 部分内容受官方限制，无法查看。
 ## 使用
-    git clone https://github.com/ly321/zhihu-daily-byVuejs.git
     node .\server\app.js
     cd .\zhihu-daily-vue\
     yarn add|npm install|cnpm install
