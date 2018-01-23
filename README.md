@@ -9,10 +9,15 @@
 ### tips 
 部分内容受官方限制，无法查看。
 ## 使用
-    node .\server\app.js
-    cd .\zhihu-daily-vue\
+```
+    node .\server\app.js
+```
+另启cmd或powershell，执行以下命令
+```
+  cd .\zhihu-daily-vue\
     yarn add|npm install|cnpm install
     yarn run dev | npm run dev |cnpm run dev  
+```
 ## API
 api来源于<a href="https://github.com/izzyleung/ZhihuDailyPurify"/>@izzyleung</a>,项目灵感来源于<a href="https://github.com/GaryChangCN/zhihu-daily-byVuejs"/>@GaryChangCN</a>
 
