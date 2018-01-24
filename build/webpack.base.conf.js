@@ -16,7 +16,7 @@ module.exports = {
       rules: [
         { test: /\.tsx?$/, loader: "ts-loader" },
         { test: /\.css$/, loader: 'style-loader!css-loader' },
-        {test: /\.scss$/,loader: 'style!css!sass'},
+        {test: /\.scss$/,loader: 'style-loader!css-loader!sass-loader'},
         {test: /\.(png|jpeg|gif|jpg)$/,loader: 'url?limit=25000'},
         { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
       ]

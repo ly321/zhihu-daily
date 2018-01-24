@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
+    "build":"webpack --config build/webpack.base.conf.js ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -24,6 +25,7 @@
   "dependencies": {
     "@types/react": "^16.0.31",
     "@types/react-dom": "^16.0.3",
+    "node-sass": "^4.7.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "request": "^2.83.0",
