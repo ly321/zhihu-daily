@@ -6,7 +6,7 @@ export default class Header extends React.Component<any,any>{
         return(
             <div className="header">
                 <i className="menu"/>
-                <span>热门消息</span>
+                <span>首页</span>
             </div>
         )
     }

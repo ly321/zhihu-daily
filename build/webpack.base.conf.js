@@ -17,7 +17,7 @@ module.exports = {
         { test: /\.tsx?$/, loader: "ts-loader" },
         { test: /\.css$/, loader: 'style-loader!css-loader' },
         {test: /\.scss$/,loader: 'style-loader!css-loader!sass-loader'},
-        {test: /\.(png|jpeg|gif|jpg)$/,loader: 'url?limit=25000'},
+        { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
         { enforce: "pre", test: /\.js$/, loader: "source-map-loader" }
       ]
     },
