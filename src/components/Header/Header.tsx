@@ -5,8 +5,14 @@ export default class Header extends React.Component<any,any>{
     render(){
         return(
             <div className="header">
-                <i className="menu"/>
-                <span>首页</span>
+                <div className="headerbox">
+                    <i className="menu iconfont icon-menu"/>
+                    <span className="title">首页</span>
+                    <span>
+                        <i className="iconfont icon-alert"></i>
+                        <i className="iconfont icon-more"></i>
+                    </span>
+                </div>
             </div>
         )
     }

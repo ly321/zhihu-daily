@@ -25,8 +25,6 @@
   "dependencies": {
     "@types/react": "^16.0.31",
     "@types/react-dom": "^16.0.3",
-    "element-react": "^1.4.5",
-    "element-theme-default": "^1.4.13",
     "lib-flexible": "^0.3.2",
     "node-sass": "^4.7.2",
     "react": "^16.2.0",
