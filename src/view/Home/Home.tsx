@@ -1,6 +1,8 @@
 import * as React from 'react';
 
 import Header from '../../components/header/Header';
+import Banner from '../../components/banner/Banner';
+
 import "./home.scss";
 
 export default class Home extends React.Component<any,any>{
@@ -8,6 +10,7 @@ export default class Home extends React.Component<any,any>{
         return(
             <div className="home">
                  <Header/>
+                 <Banner/>
             </div>
         )
     }

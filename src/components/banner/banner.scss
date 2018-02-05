@@ -1,0 +1,15 @@
+.banner {
+    .el-carousel__item {
+        img {
+            width: 100%;
+        }
+        h3 {
+            position: absolute;
+            margin-top: 7.2rem;
+            z-index: 999;
+            color: #fff;
+            font-size: 14px;
+            opacity: 0.75;
+        }
+    }
+}
