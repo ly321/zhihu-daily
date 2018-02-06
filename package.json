@@ -7,7 +7,8 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "webpack --config build/webpack.base.conf.js ",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve":"node server/app.js"
   },
   "author": "",
   "license": "ISC",
