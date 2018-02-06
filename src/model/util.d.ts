@@ -1,4 +1,3 @@
-import { type } from "os";
 
 //最新消息
 export interface NewsLatest{
