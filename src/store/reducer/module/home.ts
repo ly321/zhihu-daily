@@ -14,7 +14,7 @@ export default function reducerHome(state=defaultState,action:any):defaultState{
             return {
                 ...state,
                 stories:action.payload.stories,
-                top_stories:action.payload.stories
+                top_stories:action.payload.top_stories
             }
         default:
             return state

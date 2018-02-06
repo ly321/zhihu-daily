@@ -5,11 +5,10 @@ import { fetchNews, fetchThemes, fetchThemeContent, fetchNewsContent } from '../
 
 export function getStories(){
     return (dispatch:any)=>{
-        fetchNews().then((value:any)=>{
-                let data=value
+        fetchNews().then((payload:any)=>{
                 dispatch({
                     type:GETSTORIES,
-                    payload:{data}
+                    payload
                 })
         })
     }

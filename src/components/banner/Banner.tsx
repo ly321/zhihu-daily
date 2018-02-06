@@ -30,12 +30,6 @@ class Banner extends React.Component<any, any>{
     }
     constructor(props:any){
         super(props);
-        this.arr=[
-            "https://images.weserv.nl/?url=pic1.zhimg.com/v2-e1b144eed11984e7177a41791c02053c.jpg",
-            "https://images.weserv.nl/?url=pic1.zhimg.com/v2-2a12dba3ef7fb4b38ac7ca7b33eb20c8.jpg",
-            "https://images.weserv.nl/?url=pic3.zhimg.com/v2-efad27d808d64b32d6f6f73069f85906.jpg"
-        ]
-        
     }
     
     render() {
@@ -43,17 +37,16 @@ class Banner extends React.Component<any, any>{
             <div className="banner">
                   <Carousel height="8.133rem">
                   {
-                    this.arr.map((item, index) => {
+                    this.props.top_stories.map((item:any, index:any) => {
                       return (
                         <Carousel.Item key={index}>
-                          <h3>11111</h3>
-                          <img src={item} />
+                          <h3><span>{item.title}</span></h3>
+                          <img src={item.image} />
                         </Carousel.Item>
                       )
                     })
                   }
                 </Carousel>
-                <p>{this.props.stories}</p>
             </div>
         )
     }
