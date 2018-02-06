@@ -28,7 +28,6 @@
     "@types/react-dom": "^16.0.3",
     "@types/react-redux": "^5.0.14",
     "@types/redux-promise": "^0.5.28",
-    "@types/whatwg-fetch": "0.0.33",
     "element-react": "^1.4.5",
     "element-theme-default": "^1.4.13",
     "lib-flexible": "^0.3.2",
