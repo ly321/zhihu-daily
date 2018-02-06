@@ -5,7 +5,7 @@ export interface NewsLatest{
     stories:Store[],
     top_stories:Store[],
 }
-interface Store{
+ interface Store{
     images:String[],
     type:Number,
     id:Number,
@@ -59,4 +59,22 @@ interface Editor{
     id:Number,
     avatar:String,
     name:String,
+}
+
+//页面header
+export interface headerStyle{
+    menu?:Boolean,
+    title?:String,
+    notice?:Boolean,
+    skin?:Boolean,
+    share?:Boolean,
+    like?:Boolean,
+    commment?:Boolean,
+}
+
+
+//测试defaultState
+export interface defaultState{
+    stories?:Store[],
+    top_stories:Store[]
 }
