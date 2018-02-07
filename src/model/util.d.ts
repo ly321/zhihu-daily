@@ -1,4 +1,3 @@
-
 //最新消息
 export interface NewsLatest{
     date:String,
@@ -81,5 +80,6 @@ export interface HomeState{
 
 //SidebarState
 export interface SidebarState{
-    sidebarList:Theme[]
+    sidebarList:Theme[],
+    sidebarActive:Boolean,
 }

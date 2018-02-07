@@ -9,3 +9,6 @@ export const GETSTORIES="GETSTORIES";
 
 //主题列表
 export const GETTHEMES="GETTHEMES";
+
+//首页菜单点击
+export const SIDEBAR_ACTIVE="SIDEBAR_ACTIVE";

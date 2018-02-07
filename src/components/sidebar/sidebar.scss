@@ -10,7 +10,7 @@
         top: 0;
         bottom: 0;
         transition: all .3s ease;
-        transform: translateX(7.733rem);
+        
         .sidebar_box_header {
             padding: .4rem;
             background: #00a2ea;
@@ -88,6 +88,9 @@
                 }
             }
         }
+    }
+    .sidebar-show{
+        transform: translateX(7.733rem);
     }
     .sidebar_mask {
         position: fixed;

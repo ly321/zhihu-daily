@@ -2,14 +2,15 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { Carousel } from 'element-react';
 
-import { getThemes } from '../../store/action/control';
+import { getThemes, sidebarAcive } from '../../store/action/control';
 
 import './sidebar.scss';
 
 
 function mapStateToProps(state: any) {
     return {
-        sidebarList: state.reducerSidebar.sidebarList
+        sidebarList: state.reducerSidebar.sidebarList,
+        sidebarAcive: state.reducerSidebar.sidebarActive,
     }
 }
 
@@ -32,11 +33,11 @@ class Sidebar extends React.Component<any, any> {
     render() {
         return (
             <div className="sidebar">
-                <div className="sidebar_box">
+                <div className={this.props.sidebarActive ? "sidebar_box sidebar-show" :"sidebar_box"}>
                     <div className="sidebar_box_header">
                         <div className="user">
                             <span>
-                                <img src="../src/assets/images/logo.png" alt="" />
+                                <img src="../src/assets/images/favicon.png" alt="" />
                             </span>
                             <p>sillyY</p>
                         </div>
@@ -70,7 +71,8 @@ class Sidebar extends React.Component<any, any> {
                     }
                     </div>
                 </div>
-                <div className="sidebar_mask"></div>
+                <div className={this.props.sidebarActive?"sidebar_mask":null}></div>
+                <p> The user is <b>{this.props.sidebarActive ? 'currently' : 'not'}</b> logged in.</p>
             </div>
         )
     }
