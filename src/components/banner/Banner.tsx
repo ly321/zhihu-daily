@@ -8,7 +8,6 @@ import './banner.scss';
 
 function mapStateToProps(state:any){
     return{
-        stories:state.reducerHome.stories,
         top_stories:state.reducerHome.top_stories
     }
 }
