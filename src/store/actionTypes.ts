@@ -6,3 +6,6 @@ export const HEADER_3="HEADER_3";
 
 //最新消息
 export const GETSTORIES="GETSTORIES";
+
+//主题列表
+export const GETTHEMES="GETTHEMES";

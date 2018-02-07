@@ -1,0 +1,102 @@
+.sidebar {
+    .sidebar_box {
+        position: fixed;
+        transform: translateZ(0);
+        height: 100%;
+        overflow: auto;
+        width: 7.733rem;
+        left: -7.733rem;
+        z-index: 99;
+        top: 0;
+        bottom: 0;
+        transition: all .3s ease;
+        transform: translateX(7.733rem);
+        .sidebar_box_header {
+            padding: .4rem;
+            background: #00a2ea;
+            .user {
+                display: flex;
+                flex-direction: row;
+                img {
+                    width: .8rem;
+                }
+                p {
+                    margin-left: .533rem;
+                    line-height: .8rem;
+                    flex: 1;
+                    font-size: .48rem;
+                    font-weight: 300;
+                    color: #fff;
+                }
+            }
+            .function {
+                margin-top: .667rem;
+                display: flex;
+                flex-direction: row;
+                color: #fff;
+                .function-sub {
+                    padding-left: 1.387rem;
+                    flex: 1;
+                    font-size: .347rem;
+                    font-weight: 300;
+                    position: relative;
+                    i {
+                        position: absolute;
+                        top: 0;
+                        left: .533rem;
+                    }
+                }
+            }
+        }
+        .sidebar_box_list {
+            padding-bottom: .533rem;
+            background: #f9f9f9;
+            a:first-child {
+                p {
+                    background: #f9f9f9;
+                    color: #00a2ea;
+                    height: 1.253rem;
+                    line-height: 1.253rem;
+                    font-size: .4rem;
+                    padding-left: 1.467rem;
+                    position: relative;
+                    i {
+                        color: #00a2ea;
+                        font-size: .533rem;
+                        position: absolute;
+                        top: 0;
+                        left: .533rem;
+                    }
+                }
+            }
+            .sidebarList_item {
+                height: 1.253rem;
+                line-height: 1.253rem;
+                display: flex;
+                flex-direction: row;
+                padding-left: .4rem;
+                p {
+                    flex: 1;
+                    font-size: .373rem;
+                    color: #2c3e50;
+                }
+                span {
+                    padding-right: 1.067rem;
+                    font-size: .667rem;
+                    font-weight: 200;
+                    color: #868686;
+                }
+            }
+        }
+    }
+    .sidebar_mask {
+        position: fixed;
+        transform: translateZ(0);
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 5;
+        background: rgba(0, 0, 0, .7);
+    }
+}

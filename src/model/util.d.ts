@@ -62,7 +62,7 @@ interface Editor{
 }
 
 //页面header
-export interface headerStyle{
+export interface HeaderStyle{
     menu?:Boolean,
     title?:String,
     notice?:Boolean,
@@ -73,8 +73,13 @@ export interface headerStyle{
 }
 
 
-//测试defaultState
-export interface defaultState{
+//HomeState
+export interface HomeState{
     stories?:Store[],
     top_stories:Store[]
+}
+
+//SidebarState
+export interface SidebarState{
+    sidebarList:Theme[]
 }

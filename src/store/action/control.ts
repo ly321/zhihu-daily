@@ -1,4 +1,4 @@
-import { GETSTORIES } from '../actionTypes';
+import { GETSTORIES, GETTHEMES } from '../actionTypes';
 
 
 import { fetchNews, fetchThemes, fetchThemeContent, fetchNewsContent } from '../../service/fetch';
@@ -13,6 +13,15 @@ export function getStories(){
         })
     }
 }
-// export function get
+export function getThemes(){
+    return (dispatch:any)=>{
+        fetchThemes().then((payload:any)=>{
+            dispatch({
+                type:GETTHEMES,
+                payload
+            })
+        })
+    }
+}
 
 

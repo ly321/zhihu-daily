@@ -1,10 +1,9 @@
 import {combineReducers} from 'redux';
 
-// import reducer from './module/reducer';
 import reducerHome from './module/home';
-
+import reducerSidebar from './module/sidebar';
 
 export default combineReducers({
-	// reducer,
-	reducerHome
+	reducerHome,
+	reducerSidebar
 });

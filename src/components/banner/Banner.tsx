@@ -19,7 +19,6 @@ function mapDispatchToProps(dispatch:any){
 }
 
 class Banner extends React.Component<any, any>{
-    arr:string[];
 
     componentDidMount(){
         this.props.init();
