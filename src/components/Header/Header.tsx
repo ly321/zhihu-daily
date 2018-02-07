@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 
-import { sidebarAcive } from '../../store/action/control';
+import { sidebarActive } from '../../store/action/control';
 
 import './header.scss';
 
 function mapDispatchToProps(dispatch: any) {
     return {
-        menuClick: () => dispatch(sidebarAcive()),
+        menuClick: () => dispatch(sidebarActive()),
     }
 }
 class Header extends React.Component<any, any>{

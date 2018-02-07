@@ -28,7 +28,7 @@ export function getThemes(){
 }
 
 //处理首页菜单点击事件
-export function sidebarAcive(){
+export function sidebarActive(){
     return (dispatch:any)=>{
         dispatch({
             type:'SIDEBAR_ACTIVE',

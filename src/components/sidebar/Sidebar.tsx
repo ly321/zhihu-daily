@@ -2,7 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import { Carousel } from 'element-react';
 
-import { getThemes, sidebarAcive } from '../../store/action/control';
+import { getThemes, sidebarActive } from '../../store/action/control';
 
 import './sidebar.scss';
 
@@ -10,13 +10,14 @@ import './sidebar.scss';
 function mapStateToProps(state: any) {
     return {
         sidebarList: state.reducerSidebar.sidebarList,
-        sidebarAcive: state.reducerSidebar.sidebarActive,
+        sidebarActive: state.reducerSidebar.sidebarActive,
     }
 }
 
 function mapDispatchToProps(dispatch: any) {
     return {
         init: () => dispatch(getThemes()),
+        menuClick: () => dispatch(sidebarActive()),
     }
 }
 
@@ -25,10 +26,14 @@ class Sidebar extends React.Component<any, any> {
         this.props.init();
     }
     componentDidUpdate() {
-        this.props.init();
+        this.props.init();        
     }
     constructor(props: any) {
         super(props);
+        
+    }
+    handleClick=()=>{
+        this.props.menuClick();
     }
     render() {
         return (
@@ -71,8 +76,7 @@ class Sidebar extends React.Component<any, any> {
                     }
                     </div>
                 </div>
-                <div className={this.props.sidebarActive?"sidebar_mask":null}></div>
-                <p> The user is <b>{this.props.sidebarActive ? 'currently' : 'not'}</b> logged in.</p>
+                <div className={this.props.sidebarActive?"sidebar_mask":null} onClick={this.handleClick}></div>
             </div>
         )
     }
