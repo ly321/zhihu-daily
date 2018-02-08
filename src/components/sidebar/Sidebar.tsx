@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import {Link } from 'react-router-dom';
+import {Link, withRouter } from 'react-router-dom';
 
 
 
@@ -81,4 +81,4 @@ class Sidebar extends React.Component<any, any> {
         )
     }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Sidebar)as any);

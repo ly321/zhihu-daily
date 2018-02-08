@@ -10,7 +10,7 @@ export default class RouterConfig extends React.Component<any, any>{
             <Router>
                 <Switch>
                     <Route exact path="/" component={Home}/>
-                    <Route path="theme/:id" component={ListTheme}/> 
+                    <Route path="/theme/:id" component={ListTheme}/> 
                 </Switch>
             </Router>
         )
