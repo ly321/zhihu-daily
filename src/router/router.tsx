@@ -9,7 +9,7 @@ export default class RouterConfig extends React.Component<any, any>{
         return (
             <Router>
                 <Switch>
-                    <Route path="/" component={Home}/>
+                    <Route exact path="/" component={Home}/>
                     <Route path="theme/:id" component={ListTheme}/> 
                 </Switch>
             </Router>

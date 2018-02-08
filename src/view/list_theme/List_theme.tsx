@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import { Carousel } from 'element-react';
+import { withRouter } from 'react-router-dom';
 
 import { sidebarActive } from '../../store/action/control';
 
@@ -34,4 +34,4 @@ class ListTheme extends React.Component<any, any>{
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ListTheme);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ListTheme) as any);

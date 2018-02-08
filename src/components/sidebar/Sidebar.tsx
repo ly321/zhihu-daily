@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import {Link} from 'react-router-dom';
-import { Carousel } from 'element-react';
+import {Link } from 'react-router-dom';
+
 
 
 import { getThemes, sidebarActive } from '../../store/action/control';
@@ -25,11 +25,10 @@ function mapDispatchToProps(dispatch: any) {
 
 class Sidebar extends React.Component<any, any> {
     componentDidMount() {
+        
         this.props.init();
     }
-    componentDidUpdate() {
-        this.props.init();        
-    }
+
     constructor(props: any) {
         super(props);
         
@@ -60,12 +59,12 @@ class Sidebar extends React.Component<any, any> {
                         </div>
                     </div>
                     <div className="sidebar_box_list">
-                        <a href="#">
+                        <Link to="/">
                             <p>
                                 <i className="iconfont icon-weibiaoti1"></i>
                                 首页
                         </p>
-                        </a>
+                        </Link>
                         {
                             this.props.sidebarList.map((item:any,index:any)=>{
                             return (

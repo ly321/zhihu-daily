@@ -20,10 +20,11 @@ function mapDispatchToProps(dispatch: any) {
 
 class StoryList extends React.Component<any, any>{
     componentDidMount() {
+        
         this.props.init();
     }
     componentDidUpdate() {
-        this.props.init();
+        // this.props.init();
     }
     constructor(props: any) {
         super(props);
