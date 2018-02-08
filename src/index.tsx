@@ -6,6 +6,8 @@ import 'element-theme-default';
 
 import Home from "./view/home/Home";
 
+import RouterConfig  from './router/router';
+
 import store from './store/store';
 
 import "./assets/css/reset.scss";
@@ -16,7 +18,7 @@ class Index extends React.Component<any, any>{
     return (
 
       <Provider  store={store}>
-        <Home />
+        <RouterConfig location={this.props.location}></RouterConfig>
       </Provider>
     )
   }
