@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Carousel } from 'element-react';
 
 import { getStories } from '../../store/action/control';
+import { imgFilter } from '../../service/filter';
 
 import './banner.scss';
 
@@ -39,7 +40,7 @@ class Banner extends React.Component<any, any>{
                       return (
                         <Carousel.Item key={index}>
                           <h3><span>{item.title}</span></h3>
-                          <img src={item.image} />
+                          <img src={item.image||imgFilter(item.image)} />
                         </Carousel.Item>
                       )
                     })

@@ -2,6 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 
 import { getStories } from '../../store/action/control';
+import { imgFilter } from '../../service/filter';
 
 import './story_list.scss';
 
@@ -37,7 +38,7 @@ class StoryList extends React.Component<any, any>{
                         return (
                             <a className="story_list_item" key={index}>
                                 <p>{item.title}</p>
-                                <img src={item.images[0]}/>
+                                <img src={item.images[0]||imgFilter(item.images[0])}/>
                             </a>
                         )
                     })
