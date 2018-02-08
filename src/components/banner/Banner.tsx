@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { Carousel } from 'element-react';
-import { withRouter } from 'react-router-dom';
 
 
 import { getStories } from '../../store/action/control';
@@ -22,13 +21,8 @@ function mapDispatchToProps(dispatch:any){
 }
 
 class Banner extends React.Component<any, any>{
-
     componentDidMount(){
-        
         this.props.init();
-    }
-    componentDidUpdate(){
-        // this.props.init();
     }
     constructor(props:any){
         super(props);
@@ -53,4 +47,4 @@ class Banner extends React.Component<any, any>{
         )
     }
 }
-export default withRouter(connect(mapStateToProps,mapDispatchToProps)(Banner)as any );
+export default connect(mapStateToProps,mapDispatchToProps)(Banner);

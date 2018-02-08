@@ -23,9 +23,6 @@ class StoryList extends React.Component<any, any>{
         
         this.props.init();
     }
-    componentDidUpdate() {
-        // this.props.init();
-    }
     constructor(props: any) {
         super(props);
     }

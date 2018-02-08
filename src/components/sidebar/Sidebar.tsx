@@ -24,8 +24,7 @@ function mapDispatchToProps(dispatch: any) {
 }
 
 class Sidebar extends React.Component<any, any> {
-    componentDidMount() {
-        
+    componentDidMount() {  
         this.props.init();
     }
 

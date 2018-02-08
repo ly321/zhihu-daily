@@ -15,7 +15,7 @@ class Index extends React.Component<any, any>{
   render() {
     return (
       <Provider  store={store}>
-        <RouterConfig location={this.props.location}></RouterConfig>
+        <RouterConfig ></RouterConfig>
       </Provider>
     )
   }
