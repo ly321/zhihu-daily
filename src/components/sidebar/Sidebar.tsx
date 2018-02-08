@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
+import {Link} from 'react-router-dom';
 import { Carousel } from 'element-react';
+
 
 import { getThemes, sidebarActive } from '../../store/action/control';
 
@@ -67,10 +69,10 @@ class Sidebar extends React.Component<any, any> {
                         {
                             this.props.sidebarList.map((item:any,index:any)=>{
                             return (
-                                <a className="sidebarList_item" href="#" key={index}>
+                                <Link className="sidebarList_item" to={`/theme/${item.id}`} key={index}>
                                     <p>{item.name}</p>
                                     <span>+</span>
-                                </a>
+                                </Link>
                             )
                         })
                     }

@@ -4,8 +4,6 @@ import {Provider} from 'react-redux';
 
 import 'element-theme-default';
 
-import Home from "./view/home/Home";
-
 import RouterConfig  from './router/router';
 
 import store from './store/store';
@@ -16,7 +14,6 @@ import "./assets/css/util.scss";
 class Index extends React.Component<any, any>{
   render() {
     return (
-
       <Provider  store={store}>
         <RouterConfig location={this.props.location}></RouterConfig>
       </Provider>

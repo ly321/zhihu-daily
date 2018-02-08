@@ -5,7 +5,6 @@ import { Carousel } from 'element-react';
 import { sidebarActive } from '../../store/action/control';
 
 import ListHeader from '../../components/list_header/list_header';
-
 function mapStateToProps(state:any){
   return{
       // sidebarList: state.reducerSidebar.sidebarList,
@@ -17,18 +16,22 @@ function mapDispatchToProps(dispatch: any) {
   }
 }
 
-class  ListView  extends React.Component<any,any>{
-  render(){
-    return(
-      <div className="list_view">
+
+class ListTheme extends React.Component<any, any>{
+  constructor(props: any) {
+    super(props);
+  }
+  handleClick = () => {
+    this.props.menuClick();
+  }
+  render() {
+    return (
+        <div className="list_view">
             <ListHeader/>
-            <div className="banner">
             
-            </div>
-            
-      </div>
+        </div>
     )
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ListView);
+export default connect(mapStateToProps, mapDispatchToProps)(ListTheme);
