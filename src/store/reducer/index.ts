@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux';
 
-import reducerHome from './module/home';
+import reducerStory from './module/story';
 import reducerSidebar from './module/sidebar';
 
 export default combineReducers({
-	reducerHome,
+	reducerStory,
 	reducerSidebar
 });

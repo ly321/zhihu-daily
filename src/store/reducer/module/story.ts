@@ -8,7 +8,7 @@ var defaultState:HomeState={
     top_stories:[],
 }
 
-export default function reducerHome(state=defaultState,action:any):HomeState{
+export default function reducerStory(state=defaultState,action:any):HomeState{
     switch(action.type){
         case GETSTORIES:
             return {

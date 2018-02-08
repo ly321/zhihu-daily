@@ -8,7 +8,7 @@ import './story_list.scss';
 
 function mapStateToProps(state: any) {
     return {
-        stories: state.reducerHome.stories,
+        stories: state.reducerStory.stories,
     }
 }
 
