@@ -27,10 +27,8 @@ class Sidebar extends React.Component<any, any> {
     componentDidMount() {  
         this.props.init();
     }
-
     constructor(props: any) {
         super(props);
-        
     }
     handleClick=()=>{
         this.props.menuClick();
@@ -58,16 +56,16 @@ class Sidebar extends React.Component<any, any> {
                         </div>
                     </div>
                     <div className="sidebar_box_list">
-                        <Link to="/">
+                        <a href="/" onClick={this.handleClick}>
                             <p>
                                 <i className="iconfont icon-weibiaoti1"></i>
                                 首页
                         </p>
-                        </Link>
+                        </a>
                         {
                             this.props.sidebarList.map((item:any,index:any)=>{
                             return (
-                                <Link className="sidebarList_item" to={{pathname:`/theme/${item.id}`,state:{modal:true}}} key={index}>
+                                <Link className="sidebarList_item" to={{pathname:`/theme/${item.id}`,state:{modal:true}}} key={index} onClick={this.handleClick}>
                                     <p>{item.name}</p>
                                     <span>+</span>
                                 </Link>

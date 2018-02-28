@@ -1,20 +1,28 @@
-.header{
-    display: flex;
-    flex-direction: row;
+.listHeader {
     position: fixed;
+    transform: translateZ(0);
     top: 0;
     z-index: 4;
     height: 1.333rem;
     width: 100%;
-    background-color: #00a2ea;
-    .headerbox {
-        display: flex;
-        width: 100%;
-        align-items: center;
-        color: #fff;
-        font-size: .4rem;
-        .title {
-            flex:1;
+    background: #00a2ea;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .icon {
+        flex: 1;
+        text-align: center;
+        i{
+            line-height: 1.413rem;
+            color: #fff;
+            margin-top: -2px;
+            display: inline-block;
         }
+    }
+    .title {
+        flex: 6;
+        padding-left: .267rem;
+        color: #fff;
+        font-size: .427rem;
     }
 }
