@@ -67,7 +67,7 @@ class Sidebar extends React.Component<any, any> {
                         {
                             this.props.sidebarList.map((item:any,index:any)=>{
                             return (
-                                <Link className="sidebarList_item" to={`/theme/${item.id}`} key={index}>
+                                <Link className="sidebarList_item" to={{pathname:`/theme/${item.id}`,state:{modal:true}}} key={index}>
                                     <p>{item.name}</p>
                                     <span>+</span>
                                 </Link>

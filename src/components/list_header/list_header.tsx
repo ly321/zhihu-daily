@@ -18,14 +18,16 @@ function mapDispatchToProps(dispatch: any) {
     }
 }
 class ListHeader extends React.Component<any,any> {
+    
     constructor(props: any) {
         super(props);
+        console.log(location);
     }
-    
     handleClick = () => {
         this.props.menuClick();
     }
     render() {
+    
         return (
             <div className="listHeader">
                 <a href="#" onClick={this.handleClick}>
