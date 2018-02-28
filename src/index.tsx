@@ -2,6 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import {Provider} from 'react-redux';
 
+
 import 'element-theme-default';
 
 import RouterConfig  from './router/router';
@@ -15,7 +16,7 @@ class Index extends React.Component<any, any>{
   render() {
     return (
       <Provider  store={store}>
-        <RouterConfig></RouterConfig>
+        <RouterConfig location={this.props.location}></RouterConfig>
       </Provider>
     )
   }

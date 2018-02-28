@@ -1,9 +1,16 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 
+
 import { sidebarActive } from '../../store/action/control';
 
 import './list_header.scss';
+
+function mapStateToProps(state: any) {
+    return {
+        sidebarList: state.reducerSidebar.sidebarList,
+    }
+}
 
 function mapDispatchToProps(dispatch: any) {
     return {
@@ -14,6 +21,7 @@ class ListHeader extends React.Component<any,any> {
     constructor(props: any) {
         super(props);
     }
+    
     handleClick = () => {
         this.props.menuClick();
     }
@@ -28,4 +36,4 @@ class ListHeader extends React.Component<any,any> {
         )
     }
 }
-export default connect(null, mapDispatchToProps)(ListHeader);
+export default connect(mapStateToProps, mapDispatchToProps)(ListHeader);
