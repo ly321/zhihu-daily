@@ -1,0 +1,28 @@
+.list_content{
+    margin-top: 1.333rem;
+    padding: .276rem .133rem 0;
+    background-color: #f2f2f2;
+    .list_content_item{
+        display: flex;
+        flex-direction: row;
+        border-radius: .133rem;
+        border: .027rem solid #eaeaea;
+        border-bottom: .027rem solid #d0d0d0;
+        min-height: 1.68rem;
+        width: 97%;
+        margin: .213rem auto 0;
+        padding: .347rem;
+        background-color: #fff;
+        p {
+            font-size: .453rem;
+            line-height: 1.2;
+            margin-right: .267rem;
+            flex: 1;
+            color: #2c3e50;
+        }
+        img {
+            width: 2rem;
+            height: 1.867rem;
+        }
+    }
+}

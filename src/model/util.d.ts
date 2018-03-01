@@ -83,3 +83,8 @@ export interface SidebarState{
     sidebarList:Theme[],
     sidebarActive:Boolean,
 }
+
+//ThemeState
+export interface ThemeState{
+    stories:ThemeContent[],
+}
