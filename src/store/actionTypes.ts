@@ -13,5 +13,8 @@ export const GETTHEMES="GETTHEMES";
 //主题内容
 export const GETTHEMECONTENT="GETTHEMECONTENT";
 
+//文章内容
+export const GETNEWSCONTENT="GETNEWSCONTENT";
+
 //首页菜单点击
 export const SIDEBAR_ACTIVE="SIDEBAR_ACTIVE";

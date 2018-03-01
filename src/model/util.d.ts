@@ -26,7 +26,7 @@ interface Theme{
     name:String,
 }
 
-//页面内容
+//页面内容 
 export interface NewsContent{
     body:String,
     image_source:String,
@@ -87,4 +87,15 @@ export interface SidebarState{
 //ThemeState
 export interface ThemeState{
     stories:ThemeContent[],
+}
+
+//ContentState
+export interface ContentState{
+    body:String,
+    image_source:String,
+    title:String,
+    image:String,
+    share_url:String,
+    images:String[],
+    css:String[]
 }

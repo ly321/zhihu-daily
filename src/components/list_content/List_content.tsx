@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
+import {Link, withRouter } from 'react-router-dom';
 
 import { getThemeContent } from '../../store/action/control';
 import { imgFilter } from '../../service/filter';
@@ -34,10 +35,10 @@ class  ListContent  extends React.Component<any,any>{
             {
               this.props.stories.map((item: any, index: any) => {
                 return (
-                    <a className="list_content_item" key={index}>
+                    <Link to={{pathname:`/detail/${item.id}`}} className="list_content_item" key={index}>
                         <p>{item.title}</p>
                         {imgHandle(item)}
-                    </a>
+                    </Link>
                 )
             })
             }
@@ -45,7 +46,7 @@ class  ListContent  extends React.Component<any,any>{
     )
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(ListContent);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ListContent)as any);
 
 function imgHandle(item:any){
   if(item.images&&item.images.length>0) 

@@ -1,4 +1,4 @@
-import { GETSTORIES, GETTHEMES, GETTHEMECONTENT, SIDEBAR_ACTIVE } from '../actionTypes';
+import { GETSTORIES, GETTHEMES, GETTHEMECONTENT, GETNEWSCONTENT, SIDEBAR_ACTIVE } from '../actionTypes';
 
 
 import { fetchNews, fetchThemes, fetchThemeContent, fetchNewsContent } from '../../service/fetch';
@@ -33,6 +33,18 @@ export function getThemeContent(id:any){
         fetchThemeContent(id).then((payload:any)=>{
             dispatch({
                 type:GETTHEMECONTENT,
+                payload
+            })
+        })
+    }
+}
+
+//获取文章内容
+export function getNewsContent(id:any){
+    return (dispatch:any)=>{
+        fetchNewsContent(id).then((payload:any)=>{
+            dispatch({
+                type:GETNEWSCONTENT,
                 payload
             })
         })

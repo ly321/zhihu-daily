@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
-import {Link, withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 
 
@@ -65,7 +65,7 @@ class Sidebar extends React.Component<any, any> {
                         {
                             this.props.sidebarList.map((item:any,index:any)=>{
                             return (
-                                <Link className="sidebarList_item" to={{pathname:`/theme/${item.id}`,state:{modal:true}}} key={index} onClick={this.handleClick}>
+                                <Link className="sidebarList_item" to={{pathname:`/theme/${item.id}`}} key={index} onClick={this.handleClick}>
                                     <p>{item.name}</p>
                                     <span>+</span>
                                 </Link>

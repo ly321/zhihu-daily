@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
+import {Link, withRouter } from 'react-router-dom';
 
 import { getStories } from '../../store/action/control';
 import { imgFilter } from '../../service/filter';
@@ -20,7 +21,6 @@ function mapDispatchToProps(dispatch: any) {
 
 class StoryList extends React.Component<any, any>{
     componentDidMount() {
-        
         this.props.init();
     }
     constructor(props: any) {
@@ -34,10 +34,10 @@ class StoryList extends React.Component<any, any>{
                 {
                     this.props.stories.map((item: any, index: any) => {
                         return (
-                            <a className="story_list_item" key={index}>
+                            <Link to={{pathname:`/detail/${item.id}`}} className="story_list_item" key={index}>
                                 <p>{item.title}</p>
                                 <img src={item.images[0]||imgFilter(item.images[0])}/>
-                            </a>
+                            </Link>
                         )
                     })
                 }
@@ -45,4 +45,4 @@ class StoryList extends React.Component<any, any>{
         )
     }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(StoryList);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(StoryList)as any);

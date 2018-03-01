@@ -1,0 +1,23 @@
+.detail_header{
+    position: fixed;
+    transform: translateZ(0);
+    top: 0;
+    z-index: 4;
+    height: 1.333rem;
+    width: 100%;
+    background: #00a2ea;
+    display: flex;
+    flex-direction: row;
+    padding-right: .267rem;
+    justify-content: space-between;
+    .header_icon{
+        margin: 0 10px;
+        i{
+            line-height: 1.413rem;
+            font-size: .707rem;
+            font-style: normal;
+            color: #fff;
+        }
+        
+    }
+}
