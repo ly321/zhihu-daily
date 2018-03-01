@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { Carousel } from 'element-react';
-
+import { Link, withRouter } from 'react-router-dom';
 
 import { getStories } from '../../store/action/control';
 import { imgFilter } from '../../service/filter';
@@ -35,9 +35,11 @@ class Banner extends React.Component<any, any>{
                   {
                     this.props.top_stories.map((item:any, index:any) => {
                       return (
-                        <Carousel.Item key={index}>
+                          <Carousel.Item key={index} >
+                        <Link to={{pathname:`/detail/${item.id}`}}>
                           <h3><span>{item.title}</span></h3>
                           <img src={item.image||imgFilter(item.image)} />
+                        </Link>
                         </Carousel.Item>
                       )
                     })
@@ -47,4 +49,4 @@ class Banner extends React.Component<any, any>{
         )
     }
 }
-export default connect(mapStateToProps,mapDispatchToProps)(Banner);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Banner)as any);

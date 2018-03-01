@@ -28,7 +28,7 @@ function mapDispatchToProps(dispatch: any) {
 
 class Detail extends React.Component<any, any>{
     componentDidMount() {
-        this.props.init(3892357);
+        this.props.init(location.hash.slice(8));
     }
     render() {
         return (

@@ -1,4 +1,9 @@
-export function imgFilter(img:String){
-    let match=/pic\d+/g
-    return img.replace(match,"pic3")
+const url="http://localhost:8080";
+import * as zurl from 'url';
+export function imgFilter(value:any){
+    if (!value) {
+        return "";
+    }
+    var { path } = zurl.parse(value);
+    return url + path;
 }

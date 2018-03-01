@@ -50,5 +50,5 @@ export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ListConte
 
 function imgHandle(item:any){
   if(item.images&&item.images.length>0) 
-    return <img src={item.images[0]||imgFilter(item.images[0])}/>
+    return <img src={imgFilter(item.images[0])}/>
 }

@@ -5,7 +5,7 @@ const remoteUrl = "http://localhost:8080";
 //获取最新消息
 export function fetchNews() {
     return new Promise(function (resolve, reject) {
-        rp(remoteUrl + '/news/latest')
+        rp(remoteUrl + '/api/4/news/latest')
             .then((res:any)=>resolve(JSON.parse(res))).catch((err:any)=> reject(err));
     })
 }
@@ -13,7 +13,7 @@ export function fetchNews() {
 //获取主题列表
 export function fetchThemes() {
     return new Promise((resolve, reject) => {
-        rp(remoteUrl + '/themes')
+        rp(remoteUrl + '/api/4/themes')
         .then((res:any)=>resolve(JSON.parse(res))).catch((err:any)=> reject(err));
     });
 }
@@ -21,7 +21,7 @@ export function fetchThemes() {
 //获取主题内容
 export function fetchThemeContent(id:String) {
     return new Promise((resolve, reject) => {
-        rp(remoteUrl + '/theme/' + id)
+        rp(remoteUrl + '/api/4/theme/' + id)
         .then((res:any)=>resolve(JSON.parse(res))).catch((err:any)=> reject(err));
     });
 }
@@ -29,7 +29,7 @@ export function fetchThemeContent(id:String) {
 //获取页面内容
 export function fetchNewsContent(id:String) {
     return new Promise((resolve, reject) => {
-        rp(remoteUrl + '/news/' + id)
+        rp(remoteUrl + '/api/4/news/' + id)
         .then((res:any)=>resolve(JSON.parse(res))).catch((err:any)=> reject(err));
     });
 }
