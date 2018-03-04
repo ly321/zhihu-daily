@@ -38,7 +38,7 @@ class Banner extends React.Component<any, any>{
                           <Carousel.Item key={index} >
                         <Link to={{pathname:`/detail/${item.id}`}}>
                           <h3><span>{item.title}</span></h3>
-                          <img src={item.image||imgFilter(item.image)} />
+                          <img src={imgFilter(item.image)} />
                         </Link>
                         </Carousel.Item>
                       )

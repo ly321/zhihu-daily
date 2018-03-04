@@ -3,8 +3,10 @@ import { connect } from 'react-redux';
 import { Link, withRouter } from 'react-router-dom';
 
 import { getNewsContent } from '../../store/action/control';
+import { imgFilter } from '../../service/filter';
 
 import DetailHeader from '../../components/detail_header/Detail_header';
+
 
 import './detail.scss'
 
@@ -28,14 +30,14 @@ function mapDispatchToProps(dispatch: any) {
 
 class Detail extends React.Component<any, any>{
     componentDidMount() {
-        this.props.init(location.hash.slice(8));
+        this.props.init(location.hash.slice(9));
     }
     render() {
         return (
             <div className="detail">
                 <link rel="stylesheet" href={this.props.css}/>
                 <DetailHeader />
-                <div className="detail_img_box" style={{backgroundImage: 'url(' + this.props.image.replace(/http\w{0,1}:\/\/p/g, 'https://images.weserv.nl/?url=p') + ')'}}>
+                <div className="detail_img_box" style={{backgroundImage: 'url(' + imgFilter(this.props.image) + ')'}}>
                     <div className="detail_mask"></div>
                     <h1 className="detail_title">{this.props.title}</h1>
                     <p className="detail_image_source">{this.props.image_source}</p>

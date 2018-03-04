@@ -36,7 +36,7 @@ class StoryList extends React.Component<any, any>{
                         return (
                             <Link to={{pathname:`/detail/${item.id}`}} className="story_list_item" key={index}>
                                 <p>{item.title}</p>
-                                <img src={item.images[0]||imgFilter(item.images[0])}/>
+                                <img src={imgFilter(item.images[0])}/>
                             </Link>
                         )
                     })
