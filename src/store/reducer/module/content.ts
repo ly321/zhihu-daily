@@ -1,6 +1,7 @@
 import { GETNEWSCONTENT} from '../../actionTypes';
 
 import { ContentState } from '../../../model/util';
+import { body_ImgFilter } from '../../../service/filter';
 
 var defaultState:ContentState={
     body:'',
@@ -17,7 +18,7 @@ export default function  reducerContent(state=defaultState,action:any):ContentSt
         case GETNEWSCONTENT:
             return {
                 ...state,
-                body:action.payload.body,
+                body:body_ImgFilter(action.payload.body),
                 image_source:action.payload.image_source,
                 title:action.payload.title,
                 image:action.payload.image,
