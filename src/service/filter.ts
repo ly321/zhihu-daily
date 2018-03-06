@@ -15,7 +15,9 @@ export function imgFilter(value:any){
 export function body_ImgFilter(body:any){
     var dom=new JSDOM(body),
         arr=Array.from(dom.window.document.querySelectorAll('img'));
-    arr.map(item=>item.src=imgFilter(item.src));
+    arr.map((item:any)=>{
+        item.src=imgFilter(item.src)
+    });
     var str=dom.serialize();
     return str.slice(25,str.length-14);
 }
