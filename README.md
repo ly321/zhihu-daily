@@ -1,5 +1,6 @@
 ## 知乎日报 react版
-开发框架: `React.js、Redux、React-router`  
+开发框架: `React.js、Redux、React-router`    
+开发语言: `Typescipt`  
 构建工具：`Webpack`  
 css预编译工具: `Sass`
 
