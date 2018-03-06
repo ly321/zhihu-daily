@@ -1,5 +1,5 @@
 ## 知乎日报 react版
-开发框架: `React.js`  
+开发框架: `React.js、Redux、React-router`  
 构建工具：`Webpack`  
 css预编译工具: `Sass`
 
