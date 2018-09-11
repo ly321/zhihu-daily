@@ -10,9 +10,6 @@ css预编译工具: `Sass`
 * 查看主题内容
 * 查看文章详情
 
-## 预览
-[demo预览](http://121.196.194.2)
-
 ## 使用
 ```
 git clone https://github.com/sillyY/zhihu-daily.git
